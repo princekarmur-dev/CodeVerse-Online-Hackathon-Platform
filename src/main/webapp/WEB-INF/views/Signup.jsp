@@ -10,7 +10,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-light">
+<body
+  style="
+    background-image: url('/images/Codeverse_Signup.png');
+    background-size: cover;
+    background-position:  50% 20%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  "
+  class="d-flex align-items-center justify-content-center"
+>
 
 <div class="container vh-100 d-flex align-items-center justify-content-center">
     <div class="row w-100 justify-content-center">
