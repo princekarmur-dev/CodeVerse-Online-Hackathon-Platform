@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.grownited.entity.UserEntity;
+
 @Controller
 public class SessionController {
 	
@@ -27,16 +29,13 @@ public class SessionController {
 	}
 	
 	@PostMapping("/register")
-	public String register(String firstName, String lastName, String email, String mobile, String password) {
+	public String register(UserEntity userEntity) {
 		
-		System.out.println(firstName);
-		System.out.println(lastName);
-		System.out.println(email);
-		System.out.println(mobile);
-		System.out.println(password);
-
+		System.out.println(userEntity.getFirstName());
+		System.out.println(userEntity.getLastName());
 		
-		return "Login";
+			
+	 return "Login";
 		
 	}
 	
