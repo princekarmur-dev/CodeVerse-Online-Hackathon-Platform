@@ -1,9 +1,12 @@
 package com.grownited.controller;
 
+import java.nio.file.attribute.UserDefinedFileAttributeView;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.grownited.entity.UserDetailEntity;
 import com.grownited.entity.UserEntity;
 
 @Controller
@@ -29,10 +32,14 @@ public class SessionController {
 	}
 	
 	@PostMapping("/register")
-	public String register(UserEntity userEntity) {
+	public String register(UserEntity userEntity, UserDetailEntity userDetailEntity) {
 		
 		System.out.println(userEntity.getFirstName());
 		System.out.println(userEntity.getLastName());
+
+		
+		System.out.println(userDetailEntity.getCountry());
+		System.out.println(userDetailEntity.getState());
 		
 			
 	 return "Login";

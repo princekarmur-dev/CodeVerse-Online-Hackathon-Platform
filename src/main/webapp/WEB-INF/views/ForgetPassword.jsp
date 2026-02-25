@@ -10,23 +10,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body
-  style="
-    background-image: url('/images/Codverse_photo.png');
-    background-size: cover;
-    background-position:  50% 20%;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-  "
-  class="d-flex align-items-center justify-content-center"
->
+<body class="bg-light">
+
 <div class="container vh-100 d-flex align-items-center justify-content-center">
     <div class="row w-100 justify-content-center">
         <div class="col-11 col-sm-8 col-md-6 col-lg-4">
             <div class="card shadow-lg rounded-4">
                 <div class="card-body p-4">
 
-                    <h3 class="text-center mb-3">Forgot Password</h3>
+                    <h3 class="text-center mb-4 text-primary fw-bold">Forgot Password</h3>
+                    
+                    
                     <p class="text-center text-muted mb-4">
                         Enter your email address to reset your password
                     </p>
