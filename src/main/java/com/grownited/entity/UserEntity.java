@@ -19,7 +19,7 @@ public class UserEntity {
 	private String firstName;
 	private String lastName; 
 	private String email; 
-	private String passWord;
+	private String password;
 	private LocalDate createdAt;
 	private String role;  // admin, participant, judge
 	private String gender;
@@ -93,11 +93,11 @@ public class UserEntity {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPassWord() {
-		return passWord;
+	public String getPassword() {
+		return password;
 	}
-	public void setPassWord(String passWord) {
-		this.passWord = passWord;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public LocalDate getCreatedAt() {
 		return createdAt;

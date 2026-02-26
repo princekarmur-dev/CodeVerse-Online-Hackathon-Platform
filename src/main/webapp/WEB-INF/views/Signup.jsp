@@ -60,16 +60,28 @@
                                    placeholder="Create password" required>
                         </div>
 
-                        <!-- Gender -->
-                        <div class="mb-3">
-                            <label class="form-label">Gender</label>
-                            <select name="gender" class="form-select" required>
-                                <option value="">Select Gender</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
+                       <!-- Gender -->
+						<div class="mb-3">
+						    <label class="form-label d-block">Gender</label>
+						
+						    <div class="form-check form-check-inline">
+						        <input class="form-check-input" type="radio"
+						               name="gender" id="genderMale" value="Male" required>
+						        <label class="form-check-label" for="genderMale">Male</label>
+						    </div>
+						
+						    <div class="form-check form-check-inline">
+						        <input class="form-check-input" type="radio"
+						               name="gender" id="genderFemale" value="Female">
+						        <label class="form-check-label" for="genderFemale">Female</label>
+						    </div>
+						
+						    <div class="form-check form-check-inline">
+						        <input class="form-check-input" type="radio"
+						               name="gender" id="genderOther" value="Other">
+						        <label class="form-check-label" for="genderOther">Other</label>
+						    </div>
+						</div>
 
                         <!-- Birth Year -->
                         <div class="mb-3">
@@ -83,7 +95,7 @@
                         <!-- Contact -->
                         <div class="mb-3">
                             <label class="form-label">Contact Number</label>
-                            <input type="tel" name="contanctNum"
+                            <input type="tel" name= "contactNum"
                                    class="form-control"
                                    placeholder="10 digit mobile number"
                                    pattern="[0-9]{10}" required>

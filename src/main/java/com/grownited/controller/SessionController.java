@@ -1,16 +1,21 @@
 package com.grownited.controller;
 
-import java.nio.file.attribute.UserDefinedFileAttributeView;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.grownited.entity.UserDetailEntity;
 import com.grownited.entity.UserEntity;
+import com.grownited.repository.UserRepository;
 
 @Controller
 public class SessionController {
+	
+    @Autowired
+	UserRepository userRepository;
+	
 	
 	@GetMapping("/login")
 	public String openLoginPage(){
@@ -34,15 +39,25 @@ public class SessionController {
 	@PostMapping("/register")
 	public String register(UserEntity userEntity, UserDetailEntity userDetailEntity) {
 		
-		System.out.println(userEntity.getFirstName());
-		System.out.println(userEntity.getLastName());
+		System.out.println(userEntity.getContactNum());
+		System.out.println(userEntity.getPassword());
 
 		
 		System.out.println(userDetailEntity.getCountry());
 		System.out.println(userDetailEntity.getState());
 		
-			
-	 return "Login";
+		
+	//	UserEntity.setRole("PARTICIPANT"); 
+	//	UserEntity.SETActive(true); 
+	//	UserEntity.setCreatedAt(LocalDate.now()); 
+		
+		
+		// user insert -> userRepository
+		// new ->  X
+		userRepository.save(userEntity);
+		
+		
+			 return "Login";
 		
 	}
 	
