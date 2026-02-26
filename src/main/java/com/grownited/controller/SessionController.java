@@ -1,6 +1,8 @@
 package com.grownited.controller;
 
 
+import java.time.LocalDate;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,16 +42,16 @@ public class SessionController {
 	public String register(UserEntity userEntity, UserDetailEntity userDetailEntity) {
 		
 		System.out.println(userEntity.getContactNum());
-		System.out.println(userEntity.getPassword());
+		System.out.println(userEntity.getPassWord());
 
 		
 		System.out.println(userDetailEntity.getCountry());
 		System.out.println(userDetailEntity.getState());
 		
 		
-	//	UserEntity.setRole("PARTICIPANT"); 
-	//	UserEntity.SETActive(true); 
-	//	UserEntity.setCreatedAt(LocalDate.now()); 
+		userEntity.setRole("PARTICIPANT"); 
+		userEntity.setActive(true); 
+		userEntity.setCreatedAt(LocalDate.now()); 
 		
 		
 		// user insert -> userRepository

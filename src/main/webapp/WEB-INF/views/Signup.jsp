@@ -55,7 +55,7 @@
                         <!-- Password -->
                         <div class="mb-3">
                             <label class="form-label">Password</label>
-                            <input type="password" name="password"
+                            <input type="password" name="passWord"
                                    class="form-control"
                                    placeholder="Create password" required>
                         </div>
